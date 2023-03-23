@@ -1,0 +1,15 @@
+.Box-Wrap {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  width: 300px;
+  border: 1px solid blue;
+}
+.item-img {
+  width: 200px;
+}
+.Button-wrap {
+  display: flex;
+  justify-content: center;
+}
