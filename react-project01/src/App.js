@@ -18,16 +18,27 @@ const choice = {
 };
 function App() {
   const [userSelect, setUserSelect] = useState(null);
+  const [computerSelect, setComputerSelect] = useState(null);
   const play = (userChoice) => {
     // console.log('선택', userChoice);
     setUserSelect(choice[userChoice]);
+    let computerChoice = randomChoice();
+    setComputerSelect(computerChoice);
   };
-
+  const randomChoice = () => {
+    let itemArray = Object.keys(choice); // choice객체의 key값만 뽑아서 배열로 반환하는 함수
+    console.log('item array', itemArray);
+    let randomItem = Math.floor(Math.random() * itemArray.length);
+    console.log('random value', randomItem);
+    let final = itemArray[randomItem]; // itemArray의 인덱스 번호에 해당하는 item 반환하는 함수
+    console.log('final', final);
+    return choice[final]; // item객체가 computerChoice의 반환값이 됨
+  };
   return (
     <div>
       <div className='Box-Wrap'>
         <Box title='You' item={userSelect} />
-        {/*   */}
+        <Box title='Computer' item={computerSelect} />
       </div>
       <div className='Button-wrap'>
         {/* play함수의 매개변수: scissors, rock, paper */}

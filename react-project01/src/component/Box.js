@@ -11,4 +11,4 @@ const Box = (props) => {
   );
 };
 
-export default Box;
+export default Box; 
