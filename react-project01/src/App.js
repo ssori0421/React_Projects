@@ -16,19 +16,33 @@ const choice = {
     img: 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbmRJgA%2Fbtr5N7NTKuK%2FZF2wfKbjyBuEzyrm1QqRuK%2Fimg.png',
   },
 };
+
 function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [computerSelect, setComputerSelect] = useState(null);
+  const [result, setResult] = useState('');
   const play = (userChoice) => {
-    // console.log('선택', userChoice);
     setUserSelect(choice[userChoice]);
     let computerChoice = randomChoice();
     setComputerSelect(computerChoice);
+    setResult(judgement(choice[userChoice], computerChoice));
   };
+  const judgement = (user, computer) => {
+    console.log('user', user, 'computer', computer); // 객체
+    if (user.name === computer.name) {
+      return 'tie';
+    } else if (user.name === 'Rock')
+      return computer.name === 'Scissors' ? 'win' : 'lose';
+    else if (user.name === 'Scissors')
+      return computer.name === 'Papper' ? 'win' : 'lose';
+    else if (user.name === 'Papper')
+      return computer.name === 'Rock' ? 'win' : 'lose';
+  };
+
   const randomChoice = () => {
     let itemArray = Object.keys(choice); // choice객체의 key값만 뽑아서 배열로 반환하는 함수
     console.log('item array', itemArray);
-    let randomItem = Math.floor(Math.random() * itemArray.length);
+    let randomItem = Math.floor(Math.random() * itemArray.length); // 0, 1, 2
     console.log('random value', randomItem);
     let final = itemArray[randomItem]; // itemArray의 인덱스 번호에 해당하는 item 반환하는 함수
     console.log('final', final);
@@ -37,8 +51,8 @@ function App() {
   return (
     <div>
       <div className='Box-Wrap'>
-        <Box title='You' item={userSelect} />
-        <Box title='Computer' item={computerSelect} />
+        <Box title='You' item={userSelect} result={result} />
+        <Box title='Computer' item={computerSelect} result={result} />
       </div>
       <div className='Button-wrap'>
         {/* play함수의 매개변수: scissors, rock, paper */}
