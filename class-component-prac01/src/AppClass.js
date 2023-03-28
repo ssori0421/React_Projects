@@ -16,7 +16,7 @@ export default class AppClass extends Component {
       counter2: this.state.counter2 + 1,
       value: this.state.value + 1,
     });
-    console.log('increase', this.state); // useStatete는 비동기적으로 실행되므로 바로 반영 안됨!
+    console.log('increase', this.state); // state 변경은 비동기적으로 처리되므로 바로 반영 안됨!
   };
 
   componentDidMount() {
