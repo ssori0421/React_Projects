@@ -13,6 +13,7 @@ import ButtonBox from './component/ButtonBox';
 
 function App() {
   const [weather, setWeather] = useState(null); // weather 데이터를 넣을 state 만들기
+  const cities = ['paris', 'new york', 'tokyo', 'seoul'];
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
@@ -22,7 +23,7 @@ function App() {
   };
 
   const getWeatherByCurrentLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric  `;
     let response = await fetch(url);
     let data = await response.json();
     setWeather(data); // weather state에 데이터를 넣어줘
@@ -36,7 +37,7 @@ function App() {
     <div>
       <div className='weatherContainer'>
         <WeatherBox weather={weather} />
-        <ButtonBox />
+        <ButtonBox cities={cities} />
       </div>
     </div>
   );
