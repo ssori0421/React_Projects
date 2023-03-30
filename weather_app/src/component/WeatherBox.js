@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WeatherBox = ({ weather }) => {
-  console.log(weather);
+  // console.log(weather);
   return (
     <div className='weatherWrap'>
       <div>{weather && weather.name}</div>

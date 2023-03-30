@@ -13,7 +13,9 @@ import ButtonBox from './component/ButtonBox';
 
 function App() {
   const [weather, setWeather] = useState(null); // weather 데이터를 넣을 state 만들기
+  const [city, setCity] = useState('');
   const cities = ['paris', 'new york', 'tokyo', 'seoul'];
+
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
@@ -26,18 +28,31 @@ function App() {
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric  `;
     let response = await fetch(url);
     let data = await response.json();
+    // console.log('data', data);
     setWeather(data); // weather state에 데이터를 넣어줘
   }; // getWeatherByCurrentLocation 함수는 lat, lon을 매개변수로 넘겨받아 url을 생성하는 작업을 함
 
+  const getWeatherByCity = async () => {
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric`;
+    let response = await fetch(url);
+    let data = await response.json();
+    // console.log('data', data);
+    setWeather(data); // weather state에 데이터를 넣어줘
+  };
+
   useEffect(() => {
-    getCurrentLocation();
-  }, []);
+    if (city == '') {
+      getCurrentLocation();
+    } else {
+      getWeatherByCity();
+    }
+  }, [city]);
 
   return (
     <div>
       <div className='weatherContainer'>
         <WeatherBox weather={weather} />
-        <ButtonBox cities={cities} />
+        <ButtonBox cities={cities} setCity={setCity} />
       </div>
     </div>
   );
