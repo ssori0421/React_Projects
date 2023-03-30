@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <div>
-      <h1>Homepage입니다.</h1>
-      <Link to='/about'>Go to about page</Link>
+      <h1>HomePage입니다.</h1>
+      <Link to='/about'>Go to AboutPage</Link>
     </div>
   );
 };
 
-export default Homepage;
+export default HomePage;
