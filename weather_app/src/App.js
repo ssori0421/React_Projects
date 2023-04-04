@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import WeatherBox from './component/WeatherBox';
 import ButtonBox from './component/ButtonBox';
-import ClipLoader from 'react-spinners/ClipLoader';
 
 // 1. 앱이 실행되자 마자 현재위치 기반의 날씨가 보인다
 // 2. 날씨 상태 정보에는 도시, 섭씨, 화씨
@@ -18,54 +17,43 @@ function App() {
   const [loading, setLoading] = useState(false); // loading 값이 true 일 때에만 로딩스피너가 보이게 됨
   const cities = ['paris', 'new york', 'tokyo', 'seoul'];
 
-  const getCurrentLocation = () => {
+  const getCurrentLocation = useCallback(() => {
     navigator.geolocation.getCurrentPosition((position) => {
-      let lat = position.coords.latitude;
-      let lon = position.coords.longitude;
+      const { latitude: lat, longitude: lon } = position.coords;
       getWeatherByCurrentLocation(lat, lon); // lat, lon을 인자로 넘겨주면서 getWeatherByCurrentLocation 함수를 호출
     });
-  };
+  }, []);
 
   const getWeatherByCurrentLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric  `;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric`;
     setLoading(true);
-    let response = await fetch(url);
-    let data = await response.json();
-    // console.log('data', data);
+    const response = await fetch(url);
+    const data = await response.json();
     setWeather(data); // weather state에 데이터를 넣어줘
     setLoading(false);
   }; // getWeatherByCurrentLocation 함수는 lat, lon을 매개변수로 넘겨받아 url을 생성하는 작업을 함
 
-  const getWeatherByCity = async () => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric`;
+  const getWeatherByCity = useCallback(async () => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e919bb3b5b58a2b3ce50ef98fb148e5a&units=metric`;
     setLoading(true);
-    let response = await fetch(url);
-    let data = await response.json();
-    // console.log('data', data);
+    const response = await fetch(url);
+    const data = await response.json();
     setWeather(data); // weather state에 데이터를 넣어줘
     setLoading(false);
-  };
+  }, [city]);
 
   useEffect(() => {
-    if (city == '') {
+    if (city === '') {
       getCurrentLocation();
     } else {
       getWeatherByCity();
     }
-  }, [city]);
+  }, [city, getCurrentLocation, getWeatherByCity]);
 
   return (
-    <div>
-      {loading ? (
-        <div className='weatherContainer'>
-          <ClipLoader color='#000000' loading={loading} size={150} />
-        </div>
-      ) : (
-        <div className='weatherContainer'>
-          <WeatherBox weather={weather} />
-          <ButtonBox cities={cities} setCity={setCity} />
-        </div>
-      )}
+    <div className='weatherContainer'>
+      <WeatherBox weather={weather} loading={loading} />
+      <ButtonBox cities={cities} setCity={setCity} />
     </div>
   );
 }
