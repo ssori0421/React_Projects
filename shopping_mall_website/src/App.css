@@ -38,3 +38,13 @@
   border: none;
   outline: none;
 }
+
+.productCardContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 50px;
+  gap: 5px;
+}

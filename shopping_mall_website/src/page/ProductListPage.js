@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ProductCard from '../component/ProductCard';
 
 const ProductListPage = () => {
   const [productList, setProductList] = useState([]);
@@ -12,7 +13,13 @@ const ProductListPage = () => {
     getProducts();
   }, []);
 
-  return <div></div>;
+  return (
+    <div className='productCardContainer'>
+      {productList.map((item) => (
+        <ProductCard key={item.id} item={item} />
+      ))}
+    </div>
+  );
 };
 
 export default ProductListPage;
