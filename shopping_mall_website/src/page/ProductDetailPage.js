@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const ProductDetailPage = () => {
-  return (
-    <div>
-      상품 상세 페이지
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default ProductDetailPage
+export default ProductDetailPage;

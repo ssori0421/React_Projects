@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SignInPage = () => {
-  return <div>로그인 페이지</div>;
+  return <div></div>;
 };
 
 export default SignInPage;
