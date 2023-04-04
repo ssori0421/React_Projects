@@ -29,6 +29,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  transform: translate(0%, 50%);
+  height: 32px;
   right: 0px;
+  border-bottom: 1px solid black;
+}
+.searchWrap input {
+  border: none;
+  outline: none;
 }

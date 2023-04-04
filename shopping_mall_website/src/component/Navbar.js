@@ -36,7 +36,7 @@ const Navbar = () => {
         </ul>
         <div className='searchWrap'>
           <FontAwesomeIcon icon={faSearch} />
-          <input type='text' />
+          <input placeholder='제품 검색' type='text' />
         </div>
       </div>
     </div>
