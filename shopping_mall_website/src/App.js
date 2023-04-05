@@ -6,6 +6,7 @@ import ProductListPage from './page/ProductListPage';
 import SignInPage from './page/SignInPage';
 import ProductDetailPage from './page/ProductDetailPage';
 import Navbar from './component/Navbar';
+import PrivateRoute from './routes/PrivateRoute';
 
 //1. 전체 상품페이지, 로그인, 상품상세페이지
 //1. Navigation 만들기
@@ -29,7 +30,10 @@ function App() {
           path='/signin'
           element={<SignInPage setAuthenticate={setAuthenticate} />} //setAuthenticate 험수를 props로 전달
         />
-        <Route path='/product/:id' element={<ProductDetailPage />} />
+        <Route
+          path='/product/:id'
+          element={<PrivateRoute authenticate={authenticate} />}
+        />
       </Routes>
     </div>
   );
