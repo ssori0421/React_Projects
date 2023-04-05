@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from 'react-router-dom';
@@ -18,12 +19,16 @@ import Navbar from './component/Navbar';
 //7. 상품을 검색할 수 있다.
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false);
   return (
     <div>
       <Navbar />
       <Routes>
         <Route path='/' element={<ProductListPage />} />
-        <Route path='/signin' element={<SignInPage />} />
+        <Route
+          path='/signin'
+          element={<SignInPage setAuthenticate={setAuthenticate} />} //setAuthenticate 험수를 props로 전달
+        />
         <Route path='/product/:id' element={<ProductDetailPage />} />
       </Routes>
     </div>
