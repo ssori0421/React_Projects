@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 0,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "벨티드 트윌 코트",
       "price": 99900,
       "choice": true,
@@ -11,7 +11,7 @@
     },
     {
       "id": 1,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "슬림핏 맘 하이웨이스트 앵클 진",
       "price": 29900,
       "choice": true,
@@ -20,7 +20,7 @@
     },
     {
       "id": 2,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "와이드 하이웨이스트 진",
       "price": 39900,
       "choice": false,
@@ -29,7 +29,7 @@
     },
     {
       "id": 3,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "퍼프 슬리브 드레스",
       "price": 39900,
       "choice": false,
@@ -38,24 +38,25 @@
     },
     {
       "id": 4,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
-      "price": 29900,
-      "choice": true,
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
+      "title": "오프숄더 드레스",
+      "price": 77000,
       "new": false,
       "size": ["S", "M", "L"]
     },
     {
       "id": 5,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
-      "title": "자카드 셔츠 드레스",
-      "price": 39900,
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
+      "title": "롱 맥시 드레스",
+      "price": 62000,
       "choice": false,
       "new": false,
       "size": ["S", "M", "L"]
     },
     {
       "id": 6,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
+      "title": "코튼 드레스",
       "price": 39900,
       "choice": true,
       "new": false,
@@ -63,7 +64,7 @@
     },
     {
       "id": 7,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "오버사이즈 집업 후디",
       "price": 99900,
       "choice": false,
@@ -72,7 +73,7 @@
     },
     {
       "id": 8,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "프린트 크롭트 탑",
       "price": 14900,
       "choice": true,
@@ -81,7 +82,7 @@
     },
     {
       "id": 9,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "프린트 티셔츠",
       "price": 19900,
       "choice": false,
@@ -90,7 +91,7 @@
     },
     {
       "id": 10,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "와이드 트윌 팬츠",
       "price": 19900,
       "choice": true,
@@ -99,7 +100,8 @@
     },
     {
       "id": 11,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
+      "title": "리브드 드레스",
       "price": 29900,
       "choice": true,
       "new": true,
@@ -107,8 +109,8 @@
     },
     {
       "id": 12,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
-      "title": "프린트 크롭트 탑",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
+      "title": "셔츠 드레스",
       "price": 14900,
       "choice": true,
       "new": true,
@@ -116,7 +118,7 @@
     },
     {
       "id": 13,
-      "img": "https://lp2.hm.com/hmgoepprod?set=source[/37/43/37434b12a61d3e75cb8e7fcb2e0b6cd6ca028c5f.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]",
+      "img": "https://velog.velcdn.com/images/ssori0421/post/7bc13119-9572-4ee6-929a-4ccb111225be/image.jpeg",
       "title": "플레어 로라이즈 진",
       "price": 29900,
       "choice": false,
