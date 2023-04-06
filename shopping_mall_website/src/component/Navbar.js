@@ -19,8 +19,14 @@ const Navbar = () => {
 
   const goToSignInPage = () => {
     navigate('/signin');
-  }; 
-
+  };
+  
+  const search = (event) => {
+    if (event.key === 'Enter') {
+      const keyword = event.target.value;
+      navigate(`/q=${keyword}`);
+    }
+  };
   return (
     <div>
       <div>
@@ -43,7 +49,11 @@ const Navbar = () => {
         </ul>
         <div className='searchWrap'>
           <FontAwesomeIcon icon={faSearch} />
-          <input placeholder='제품 검색' type='text' />
+          <input
+            placeholder='제품 검색'
+            type='text'
+            onKeyDown={(event) => search(event)}
+          />
         </div>
       </div>
     </div>

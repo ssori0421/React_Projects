@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../component/ProductCard';
+import { useSearchParams } from 'react-router-dom';
 
 const ProductListPage = () => {
   const [productList, setProductList] = useState([]);
+  const [query, setQuery] = useSearchParams();
+  
   const getProducts = async () => {
-    const url = 'http://localhost:5000/products';
+    const searchQuery = query.get('q') || '';
+    console.log('searchQuery', searchQuery);
+    const url = `http://localhost:5000/products?q=${searchQuery}`;
     const response = await fetch(url); // url을 fetch해줘
     const data = await response.json(); // response에서 json 추출
     setProductList(data);
   };
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [query]);
 
   return (
     <div className='productCardContainer'>
