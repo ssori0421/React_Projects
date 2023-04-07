@@ -23,12 +23,17 @@ function App() {
   const [authenticate, setAuthenticate] = useState(false);
   return (
     <div>
-      <Navbar />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       <Routes>
         <Route path='/' element={<ProductListPage />} />
         <Route
           path='/signin'
-          element={<SignInPage setAuthenticate={setAuthenticate} />} //setAuthenticate 험수를 props로 전달
+          element={
+            <SignInPage
+              authenticate={authenticate}
+              setAuthenticate={setAuthenticate}
+            />
+          } //setAuthenticate 험수를 props로 전달
         />
         <Route
           path='/product/:id'
