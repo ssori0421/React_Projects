@@ -4,7 +4,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ authenticate, setAuthenticate }) => {
   const menuList = [
     '여성',
     'Divided',
@@ -20,19 +20,28 @@ const Navbar = () => {
   const goToSignInPage = () => {
     navigate('/signin');
   };
-  
+
   const search = (event) => {
     if (event.key === 'Enter') {
       const keyword = event.target.value;
-      navigate(`/q=${keyword}`);
+      navigate(`?q=${keyword}`);
     }
   };
+
+  const reverseAuthenticate = () => {
+    setAuthenticate(!authenticate);
+  };
+
   return (
     <div>
       <div>
         <div className='signInWrap' onClick={goToSignInPage}>
           <FontAwesomeIcon icon={faUser} />
-          <div>로그인</div>
+          {authenticate ? (
+            <div onClick={reverseAuthenticate}>로그아웃</div>
+          ) : (
+            <div>로그인</div>
+          )}
         </div>
       </div>
       <div className='logoWrap'>
