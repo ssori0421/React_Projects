@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PersonBox = () => {
+const PersonBox = ({ item }) => {
   return (
     <div className='person-box'>
       <img
@@ -8,8 +8,8 @@ const PersonBox = () => {
         width='50px'
       />
       <div className='person-info'>
-        <div>다솔</div>
-        <div>1234567</div>
+        <div>{item.name}</div>
+        <div>{item.phoneNumber}</div>
       </div>
     </div>
   );
